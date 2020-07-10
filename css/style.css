@@ -23,7 +23,15 @@ header {
 }
 
 #sect-latest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: lightskyblue;
+    height: 600px;
+}
+
+#sect-latest img {
+    width: 100%;
 }
 
 #sect-wannarandom {
@@ -32,4 +40,14 @@ header {
 
 footer {
     background-color: lightgreen;
+}
+
+.container-latest {
+    display: flex;
+    flex-direction: column;
+}
+
+.txt-latest {
+    width: 100%;
+
 }
