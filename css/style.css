@@ -1,0 +1,35 @@
+* {
+    border: grey solid 0.5px;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: yellow;
+    display: flex;
+    height: 60px;
+}
+
+#sect-welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: orange;
+    height: 550px;
+    text-align: center;
+
+}
+
+#sect-latest {
+    background-color: lightskyblue;
+}
+
+#sect-wannarandom {
+    background-color: pink;
+}
+
+footer {
+    background-color: lightgreen;
+}
