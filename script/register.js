@@ -55,6 +55,7 @@ class Signup {
     // gestionar el envío de datos (submit button)
 
     saveData = (event) => {
+        event.preventDefault();
         //recoge value de cada input
         const name = this.nameInput.value
         const username = this.usernameInput.value
@@ -67,13 +68,8 @@ class Signup {
 
         const newUser = new User(name, username, email, password);
 
-        /* 
-         * Pseudocódigo
-         *
-         *   // queremos guardar el nuevo usuario en la base de datos (simulada)
-         *       database.createNewUser (newUser);
-         * 
-         */
+        db.saveNewUser(newUser);
+
 
         //vaciar form
         this.nameInput.value = "";
