@@ -1,82 +1,116 @@
 * {
-    border: grey solid 0.5px;
+  border: grey solid 0.5px;
 }
 
 body {
-    margin: 0 0.1rem;
+  margin: 0 0.1rem;
 }
 
 header {
-    background-color: yellow;
-    display: flex;
-    height: 4rem;
+  background-color: yellow;
+  display: flex;
+  height: 4rem;
 }
 /* WELCOME */
 #sect-welcome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: orange;
-    height: 550px;
-    text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: orange;
+  height: 550px;
+  text-align: center;
 }
 /* LATEST RANDOM */
 #sect-latest {
-    display: flex;
-    flex-direction: column;
-    background-color: pink;
-    height: 450px;
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  height: 450px;
 }
 
 #sect-latest > h2 {
-    height: 25%;
-    
-
+  height: 25%;
 }
 #sect-latest > div {
-    height: 60%;
+  height: 60%;
 }
 
 /* RANDOM */
 #sect-random {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: lightskyblue;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: lightskyblue;
+  height: 100%;
 }
 
 #sect-random img {
-    width: 100%;
+  width: 100%;
 }
 
 .container-random {
-    display: flex;
-    flex-direction: column;
-    height: 65%;
+  display: flex;
+  flex-direction: column;
+  height: 65%;
 }
 
 .txt-random {
-    width: 100%;
+  width: 100%;
 }
 /* FOOTER */
 footer {
-    background-color: lightgreen;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  background-color: lightgreen;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .createdby {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .nav-bar-bottom {
-    margin-bottom: 1rem;
-    
+  margin-bottom: 1rem;
 }
+
+/* REGISTER */
+
+#sect-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+  height: 90%;
+}
+
+.container-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 65%;
+    width: 50%
+  }
+
+/* LOGIN  */
+
+#sect-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightskyblue;
+    height: 90%;
+  }
+  
+  .container-login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 65%;
+      width: 50%
+    }
