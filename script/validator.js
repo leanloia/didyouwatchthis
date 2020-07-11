@@ -1,7 +1,7 @@
 'use strict'
 
 class Validator {
-    constructor {
+    constructor () {
         //mensajes predeterminados
         this.usernameExistError = 'Username ya registrado'
         this.invalidEmailError = 'Introduce un e-mail válido';
@@ -21,22 +21,25 @@ class Validator {
 
 
     //validar el username
-    usernameIsValid = (newUsername) => {
-        let usernameUnique = true;
+    validateUniqueUsername = (newUsername) => {
+        const usersDB = db.getAllUsers();
+        let userNameUnique = true;
 
         if (usersDB.length > 0) {
             usersDB.forEach(userObj => {
                 if (userObj.username === newUsername) {
-                    usernameUnique = false;
+                    userNameUnique = false;
                 }
-            })
+            });
+
+            if (userNameUnique) {
+                delete this.errors.usernameExistError;
+            } else {
+                this.errors.usernameExistError = this.usernameExistError
+            }
         }
 
-        if (usernameUnique) {
-            delete this.errors.usernameExistError
-        } else {
-            this.errors.usernameExistError = this.usernameExistError
-        }
+        
 
     }
 
@@ -66,7 +69,6 @@ class Validator {
     //validar que el email no existe
     validateUniqueEmail = (newEmail) => {
         const usersDB = db.getAllUsers();
-
         let emailUnique = true;
 
         if (usersDB.length > 0) {
@@ -92,18 +94,34 @@ class Validator {
 
     //validar el password (longitud)
     validatePassword = (password) => {
-
-
+        if (password.length > 5) {
+            delete this.errors.passwordError
+        } else {
+            this.errors.passwordError = this.passwordError
+        }
     }
 
     //validar que el password es igual al repeatPassword
-    validatePasswordRepeat = (password) => {}
+    validatePasswordRepeat = (password, repeatPassword) => {
+        if (password === repeatPassword) {
+            delete this.errors.repeatPasswordError
+        } else {
+            this.errors.repeatPasswordError = this.repeatPasswordError
+        }
+    }
 
     //método para obtener objeto con errores, para mostrarlo en la pagina register
     getErrors = () => this.errors;
 
     //reiniciar los errores mostrados
-    resetValidator = () => {}
+    resetValidator = () => {
+        this.errors = {
+            usernameExistError: this.usernameExistError,
+            invalidEmailError: this.invalidEmailError,
+            passwordError: this.passwordError,
+            repeatPasswordError: this.repeatPasswordError
+        }
+    }
 
 
 }

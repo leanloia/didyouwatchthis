@@ -14,44 +14,58 @@ class Signup {
     }
 
     // gestionar cambios del input name
-    handleNameInput = (event) => {
-        const name = event.target.value;
 
-        console.log('name', name);
-
-        //validar texto del input name
-    }
     handleUsernameInput = (event) => {
         const username = event.target.value;
 
-        console.log('username', username);
+        validator.validateUniqueUsername(username);
+
+        this.setErrorMessages();
+
 
         //validar texto del input username
     }
     // gestionar cambios del input username
     handleEmailInput = (event) => {
         const email = event.target.value;
-
-        console.log(`email`, email);
-
         //validar texto del input email
+
+        validator.validateValidEmail(email);
+
+        const errors = validator.getErrors();
+
+        //si el nombre del email es valido
+        if (!errors.invalidEmailError) {
+            //comprueba si el email es unico
+            validator.validateUniqueEmail(email);
+        }
+
+        this.setErrorMessages();
+
     }
     // gestionar cambios del input PASSWORD
     handlePasswordInput = (event) => {
         const password = event.target.value;
-
-        console.log(`password`, password);
-
+        const passwordRepeat = this.repeatPasswordInput.value
         //validar texto del input password
+        validator.validatePassword(password);
+        validator.validatePasswordRepeat(password, passwordRepeat);
+
+        this.setErrorMessages();
     }
     // gestionar cambios del input REPEAT PASSWORD
     handleRepeatPasswordInput = (event) => {
-        const repeatPassword = event.target.value;
-
-        console.log(`repeatPassword`, repeatPassword);
+        const passwordRepeat = event.target.value;
+        const password = this.passwordInput.value;
 
         //validar texto del input repeatPassword
+        validator.validatePassword(password);
+        validator.validatePasswordRepeat(password, passwordRepeat)
+
+        this.setErrorMessages();
     }
+
+
     // gestionar el envío de datos (submit button)
 
     saveData = (event) => {
@@ -78,6 +92,9 @@ class Signup {
         this.passwordInput.value = "";
         this.repeatPasswordInput.value = "";
 
+        this.showSuccessMessage();
+        this.removeMessages();
+
     }
 
     // registrar funciones para cada input
@@ -90,6 +107,44 @@ class Signup {
 
         this.buttonInput.addEventListener('click', this.saveData)
     }
+
+    setErrorMessages = () => {
+        this.errorsWrapper.innerHTML = "";
+
+        const errorsObj = validator.getErrors();
+        const errorsStringsArr = Object.values(errorsObj)
+
+        errorsStringsArr.forEach(errorStr => {
+            const errorMessageP = document.createElement('p');
+            errorMessageP.innerHTML = errorStr;
+            this.errorsWrapper.appendChild(errorMessageP)
+        });
+
+    }
+
+    showSuccessMessage = () => {
+        this.errorsWrapper.innerHTML = "";
+        const errorsObj = validator.getErrors();
+        const errorsArr = Object.values(errorsObj);
+
+        if (errorsArr.length > 1) {
+            return;
+        }
+
+
+        const successMessageP = document.createElement('p');
+        successMessageP.innerHTML = 'La cuenta ha sido creada con éxito';
+
+        this.errorsWrapper.appendChild(successMessageP);
+    }
+
+    removeMessages = () => {
+        setTimeout(() => {
+            this.errorsWrapper.innerHTML = "";
+        }, 2000)
+    }
+
+
 }
 
 const signup = new Signup();
