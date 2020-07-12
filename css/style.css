@@ -1,5 +1,5 @@
 * {
-  border: grey solid 0.5px;
+  /* border: grey solid 0.5px; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -90,8 +90,6 @@ header p {
   flex-direction: column;
   /* background-color: pink; */
   margin: 1em;
-
-
 }
 
 #sect-latest>h2 {
@@ -105,15 +103,12 @@ header p {
 #carouselExampleSlidesOnly {
   z-index: 0;
   margin: 1em;
-
 }
 
 .carousel-inner {
   display: flex;
   align-items: center;
-  /* width: 50%; */
-
-
+  
 }
 
 .carousel-item active {
@@ -195,6 +190,7 @@ footer {
   width: 50%
 }
 
+
 /* LOGIN  */
 
 #sect-login {
@@ -202,8 +198,11 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightskyblue;
-  height: 90%;
+  /* background-color: lightskyblue; */
+  height: 100%;
+  padding: 9em 2em;
+  
+  
 }
 
 .container-login {
