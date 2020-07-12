@@ -122,8 +122,9 @@ header p {
   justify-content: space-around;
   /* background-color: lightskyblue; */
   height: 100%;
-  margin: 1em;
+  margin: 0 1em 1em 1em;
   z-index: 0;
+  padding: 9em 4em,
 }
 
 #sect-random img {
