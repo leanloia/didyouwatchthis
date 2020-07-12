@@ -5,37 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link href="/css/reset.css" type="text/css" rel="stylesheet"/> -->
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="/css/style.css" rel="stylesheet" />
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div>icono</div>
-        <div>nombre-web</div>
-        <div>
-            <input type="search" id="search-bar" placeholder="Search" />
-            <input type="button" id="search-btn" placeholder="Go" />
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" />&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Random Pick</a>
+            <a href="#">Q/A</a>
+            <a href="#">Register</a>
+            <a href="#">Login</a>
+
+            <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
         </div>
-        <nav>
-            <ul>
-                <li>home</li>
-                <li>login</li>
-                <li>register</li>
-                <li>Q/A</li>
-                <li>random pick</li>
-            </ul>
-        </nav>
+        <span onclick="openNav()"><i class="fas fa-chevron-down fa-2x"></i></span>
+        <i class="fas fa-random fa-2x "></i>
+        <p>did you watch this?</p>
     </header>
     <section id="sect-register">
         <h2>Sign up</h2>
         <div class="container-register">
-            <input type="text" id="name" placeholder="nombre"/>
-            <input type="text" id="username" placeholder="username"/>
-            <input type="text" id="email" placeholder="e-mail"/>
+            <input type="text" id="name" placeholder="nombre" />
+            <input type="text" id="username" placeholder="username" />
+            <input type="text" id="email" placeholder="e-mail" />
             <input type="password" id="password" placeholder="password" />
-            <input type="password" id="repeatPassword" placeholder="repeat password"/>
+            <input type="password" id="repeatPassword" placeholder="repeat password" />
             <button type="submit" id="signup-button">Sign up</button>
 
         </div>
@@ -45,21 +51,43 @@
     <script src="script/user.js"></script>
     <script src="script/database.js"></script>
     <script src="script/validator.js"></script>
-    
+    <script src="script/index.js"></script>
+
 
 </body>
 
 <footer>
-    <p>Texto footer</p>
-    <input type="text" id="contact-name" placeholder="Name" />
-    <input type="text" id="contact-mail" placeholder="E-mail" />
-    <input type="text" id="contact-mail" placeholder="Comment" />
-    <input type="button" id="contact-mail" />
-    <div class="createdby">
-        <div>Created by </div>
-        <div>íconos redes</div>
+    <section>
+        <p><a class="text text-center text-decoration-none" data-toggle="collapse" href="#multiCollapseExample1"
+                role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Wanna say something?</a></p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Comment</label>
+                            <textarea class="form-control" id="exampleInputPassword1" rows="3">
+                        </textarea>
+                            <button type="submit" class="btn btn-outline-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="nav-bar-bottom">
+        <a href="#">Home</a>
+        <a href="#">Random Pick</a>
+        <a href="#">Q/A</a>
+        <a href="#">Register</a>
+        <a href="#">Login</a>
     </div>
-    <div class="nav-bar-bottom">resumen nav bar</div>
 </footer>
 
 </html>
