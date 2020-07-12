@@ -5,42 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="/css/reset.css" type="text/css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link href="/css/style.css" rel="stylesheet" />
+
     <title>Document</title>
 </head>
 
 <body>
     <header>
-        <div>icono</div>
-        <div>nombre-web</div>
-        <div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" />&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Random Pick</a>
+            <a href="#">Q/A</a>
+            <a href="#">Register</a>
+            <a href="#">Login</a>
             <input type="search" id="search-bar" placeholder="Search" />
             <input type="button" id="search-btn" placeholder="Go" />
         </div>
-        <nav>
-            <ul>
-                <li>home</li>
-                <li>login</li>
-                <li>register</li>
-                <li>Q/A</li>
-                <li>random pick</li>
-            </ul>
-        </nav>
+        <span onclick="openNav()"><i class="fas fa-chevron-down fa-2x"></i></span>
+        <i class="fas fa-random fa-2x "></i>
+        <p>did you watch this?</p>
     </header>
+
     <section id="sect-welcome">
         <h1>Welcome</h1>
         <p>well, this is kinda random...</p>
     </section>
     <section id="sect-latest">
         <h2>Latest randoms</h2>
-        <section id="carousel-random">Carousel
-            <img src="/img/placeholder_400x300.jpg" alt="placeholder_400x300"/>
-        </section>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/img/placeholder_100x133.jpg" class="d-block w-100" alt="imgrandom">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/placeholder_100x133.jpg" class="d-block w-100" alt="imgrandom">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/placeholder_100x133.jpg" class="d-block w-100" alt="imgrandom">
+                </div>
+            </div>
+        </div>
     </section>
     <section id="sect-random">
-        <h2>Want a random?</h2> 
+        <h2>Want a random?</h2>
         <div class="container-random">
             <img class="img-random"
                 src="https://imdb-api.com/images/original/MV5BMjIyNjk1OTgzNV5BMl5BanBnXkFtZTcwOTU0OTk1Mw@@._V1_Ratio1.5000_AL_.jpg"
@@ -58,23 +71,61 @@
             </div>
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
     <script src="script/imbd-api.js"></script>
+    <script src="script/index.js"></script>
+
 </body>
 
 <footer>
-    <p>Texto footer</p>
-    <input type="text" id="contact-name" placeholder="Name" />
+    <section>
+        <p><a class="text text-center" data-toggle="collapse" href="#multiCollapseExample1" role="button"
+                aria-expanded="false" aria-controls="multiCollapseExample1">Wanna say something?</a></p>
+        <div class="row">
+            <div class="col">
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Comment</label>
+                            <textarea class="form-control" id="exampleInputPassword1" rows="3">
+                        </textarea>
+                            <button type="submit" class="btn btn-outline-light">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <input type="text" id="contact-name" placeholder="Name" />
     <input type="text" id="contact-mail" placeholder="E-mail" />
     <input type="text" id="contact-mail" placeholder="Comment" />
-    <input type="button" id="contact-mail" placeholder="Submit" />
-    <div class="createdby">
+    <input type="button" id="contact-mail" placeholder="Submit" /> -->
+    <!-- <div class="createdby">
         <div>Created by </div>
         <div>íconos redes</div>
+    </div> -->
+    <div class="nav-bar-bottom">
+        <a href="#">Home</a>
+        <a href="#">Random Pick</a>
+        <a href="#">Q/A</a>
+        <a href="#">Register</a>
+        <a href="#">Login</a>
     </div>
-    <div class="nav-bar-bottom">resumen nav bar</div>
 </footer>
 
 </html>

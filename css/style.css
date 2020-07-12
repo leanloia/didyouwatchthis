@@ -9,10 +9,67 @@ body {
 header {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
   background-color: yellow;
   display: flex;
   height: 4rem;
+  width: 100%;
+  margin-right: 1em;
+  z-index: 2
+}
 
+header p {
+  margin-bottom: 0;
+}
+
+
+/* NAV BAR */
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(17, 17, 17, 0.801);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  color: #595e7e;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
 }
 
 /* WELCOME */
@@ -30,7 +87,8 @@ header {
   display: flex;
   flex-direction: column;
   background-color: pink;
-  height: 450px;
+
+
 }
 
 #sect-latest>h2 {
@@ -39,6 +97,24 @@ header {
 
 #sect-latest>div {
   height: 60%;
+}
+
+#carouselExampleSlidesOnly {
+  z-index: 0;
+  margin: 1em;
+
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  /* width: 50%; */
+
+
+}
+
+.carousel-item active {
+  height: 50%;
 }
 
 /* RANDOM */
@@ -64,10 +140,14 @@ header {
   width: 100%;
 }
 
+#carousel-random {
+  height: 50%;
+}
+
 /* FOOTER */
 footer {
   background-color: lightgreen;
-  height: 250px;
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -82,6 +162,12 @@ footer {
 
 .nav-bar-bottom {
   margin-bottom: 1rem;
+}
+
+.nav-bar-bottom {
+  display: flex;
+  flex-direction: row;
+  
 }
 
 /* REGISTER */
@@ -121,3 +207,15 @@ footer {
   height: 65%;
   width: 50%
 }
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-height: 667px) {}
