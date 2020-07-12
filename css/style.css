@@ -178,8 +178,9 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: lightskyblue;
+  /* background-color: lightskyblue; */
   height: 90%;
+  padding: 8em 4em;
 }
 
 .container-register {
