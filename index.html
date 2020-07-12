@@ -24,8 +24,12 @@
             <a href="#">Q/A</a>
             <a href="#">Register</a>
             <a href="#">Login</a>
-            <input type="search" id="search-bar" placeholder="Search" />
-            <input type="button" id="search-btn" placeholder="Go" />
+
+            <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
+                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                    aria-label="Search">
+                <i class="fas fa-search" aria-hidden="true"></i>
+            </form>
         </div>
         <span onclick="openNav()"><i class="fas fa-chevron-down fa-2x"></i></span>
         <i class="fas fa-random fa-2x "></i>
@@ -87,8 +91,8 @@
 
 <footer>
     <section>
-        <p><a class="text text-center" data-toggle="collapse" href="#multiCollapseExample1" role="button"
-                aria-expanded="false" aria-controls="multiCollapseExample1">Wanna say something?</a></p>
+        <p><a class="text text-center text-decoration-none" data-toggle="collapse" href="#multiCollapseExample1"
+                role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Wanna say something?</a></p>
         <div class="row">
             <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
@@ -104,21 +108,12 @@
                             <label for="exampleInputPassword1">Comment</label>
                             <textarea class="form-control" id="exampleInputPassword1" rows="3">
                         </textarea>
-                            <button type="submit" class="btn btn-outline-light">Submit</button>
+                            <button type="submit" class="btn btn-outline-info">Submit</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- <input type="text" id="contact-name" placeholder="Name" />
-    <input type="text" id="contact-mail" placeholder="E-mail" />
-    <input type="text" id="contact-mail" placeholder="Comment" />
-    <input type="button" id="contact-mail" placeholder="Submit" /> -->
-    <!-- <div class="createdby">
-        <div>Created by </div>
-        <div>íconos redes</div>
-    </div> -->
     <div class="nav-bar-bottom">
         <a href="#">Home</a>
         <a href="#">Random Pick</a>
