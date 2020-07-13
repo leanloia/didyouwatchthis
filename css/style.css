@@ -5,6 +5,7 @@
 
 body {
   margin: 0 0.1rem;
+
 }
 
 header {
@@ -66,6 +67,7 @@ header p {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
@@ -73,6 +75,8 @@ header p {
   transition: margin-left .5s;
   padding: 20px;
 }
+
+
 
 /* WELCOME */
 #sect-welcome {
@@ -108,7 +112,7 @@ header p {
 .carousel-inner {
   display: flex;
   align-items: center;
-  
+
 }
 
 .carousel-item active {
@@ -126,6 +130,7 @@ header p {
   z-index: 0;
   padding: 9em 4em,
 }
+
 
 #sect-random img {
   width: 100%;
@@ -203,8 +208,8 @@ footer {
   /* background-color: lightskyblue; */
   height: 100%;
   padding: 9em 2em;
-  
-  
+
+
 }
 
 .container-login {
@@ -218,6 +223,42 @@ footer {
 .nav-bar-bottom {
   font-size: 0.5em;
 }
+
+/* MOVIE DETAILS */
+
+#sect-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: lightskyblue; */
+  height: 100%;
+  margin: 0 1em 1em 1em;
+  z-index: 0;
+  padding: 9em 4em,
+
+}
+
+.container-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 65%;
+
+}
+
+.img-cont {
+  height: 45%;
+  width: 90%;
+  padding-top: 1rem;
+}
+
+.titleMovieSearch {
+  padding-top: 6.5rem;
+  font-size: 1.3em;
+
+}
+
+
 
 @media screen and (max-height: 450px) {
   .sidenav {
