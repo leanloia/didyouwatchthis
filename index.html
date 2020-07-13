@@ -19,16 +19,16 @@
     <header>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" />&times;</a>
-            <a href="#">Home</a>
-            <a href="#">Random Pick</a>
+            <a href="/index.html">Home</a>
+            <!-- <a href="#">Random Pick</a> -->
             <a href="#">Q/A</a>
-            <a href="#">Register</a>
-            <a href="#">Login</a>
+            <a href="/register.html">Register</a>
+            <a href="/login.html">Login</a>
 
             <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
-                <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                <input class="search-bar form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
                     aria-label="Search">
-                <i class="fas fa-search" aria-hidden="true"></i>
+                <i class="search-btn h-100 fas fa-search text-white" aria-hidden="true" href="/moviedetails.html"></i>
             </form>
         </div>
         <span onclick="openNav()"><i class="fas fa-chevron-down fa-2x"></i></span>
@@ -67,7 +67,8 @@
         <div class="container-random">
             <div id="image-random" class="img-random"></div>
             <div class="txt-random">
-                <p><a class="btn btn-info btn-sm text text-center text-decoration-none" data-toggle="collapse" href="#seeMoreInfo">More info</a></p>
+                <p><a class="btn btn-info btn-sm text text-center text-decoration-none" data-toggle="collapse"
+                        href="#seeMoreInfo">More info</a></p>
                 <div class="collapse" id="seeMoreInfo">
                     <ul class="list-group list-group-flush">
                         <li id="title-moreinfo" class="list-group-item">Title</li>
@@ -76,10 +77,10 @@
                         <li id="crew-moreinfo" class="list-group-item">Crew</li>
                     </ul>
                 </div>
-                <img
             </div>
         </div>
     </section>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -91,6 +92,7 @@
     </script>
     <script src="script/imbd-api.js"></script>
     <script src="script/index.js"></script>
+    <script src="script/search.js"></script>
 
 </body>
 
