@@ -45,13 +45,19 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="/img/placeholder_100x133.jpg" class="d-block w-100" alt="imgrandom">
+                    <img src="/img/dogtooth.jpg" class="d-block w-100" alt="imgrandom">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/placeholder_100x133.jpg" class="d-block w-100" alt="imgrandom">
+                    <img src="/img/dunkirk.jpg" class="d-block w-100" alt="imgrandom">
                 </div>
                 <div class="carousel-item">
-                    <img src="/img/placeholder_100x133.jpg" class="d-block w-100" alt="imgrandom">
+                    <img src="/img/fight_club.jpg" class="d-block w-100" alt="imgrandom">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/magnolia.jpg" class="d-block w-100" alt="imgrandom">
+                </div>
+                <div class="carousel-item">
+                    <img src="/img/shining.jpg" class="d-block w-100" alt="imgrandom">
                 </div>
             </div>
         </div>
@@ -59,19 +65,18 @@
     <section id="sect-random">
         <h2>Want a random?</h2>
         <div class="container-random">
-            <img class="img-random"
-                src="https://imdb-api.com/images/original/MV5BMjIyNjk1OTgzNV5BMl5BanBnXkFtZTcwOTU0OTk1Mw@@._V1_Ratio1.5000_AL_.jpg"
-                alt="image random" />
+            <div id="image-random" class="img-random"></div>
             <div class="txt-random">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos amet dolorum doloribus aliquam
-                    cupiditate delectus cum impedit ullam quae porro, voluptas error praesentium voluptates, fugit
-                    dolore pariatur odit distinctio sapiente?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos amet dolorum doloribus aliquam
-                    cupiditate delectus cum impedit ullam quae porro, voluptas error praesentium voluptates, fugit
-                    dolore pariatur odit distinctio sapiente?Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dignissimos amet dolorum doloribus aliquam
-                    cupiditate delectus cum impedit ullam quae porro, voluptas error praesentium voluptates, fugit
-                    dolore pariatur odit distinctio sapiente?</p>
+                <p><a class="btn btn-info btn-sm text text-center text-decoration-none" data-toggle="collapse" href="#seeMoreInfo">More info</a></p>
+                <div class="collapse" id="seeMoreInfo">
+                    <ul class="list-group list-group-flush">
+                        <li id="title-moreinfo" class="list-group-item">Title</li>
+                        <li id="year-moreinfo" class="list-group-item">Year</li>
+                        <li id="imDbRating-moreinfo" class="list-group-item">ImDbRating</li>
+                        <li id="crew-moreinfo" class="list-group-item">Crew</li>
+                    </ul>
+                </div>
+                <img
             </div>
         </div>
     </section>
