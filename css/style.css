@@ -126,11 +126,16 @@ header p {
   display: flex;
   flex-direction: column;
   /* background-color: pink; */
-  margin: 0em;
   background-color: #F2F2F2;
+  width: 100%;
 }
 
-#sect-latest>h2 {
+#sect-latest > div {
+  margin: 0em 1em 1em 1em;
+}
+
+
+#sect-latest h2 {
   height: 25%;
   padding-top: 1em;
 }
