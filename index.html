@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;500&display=swap');
+    </style>
     <link href="/css/reset.css" type="text/css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -26,21 +28,19 @@
             <a href="/login.html">Login</a>
 
             <form class="form-inline d-flex justify-content-center md-form form-sm active-cyan-2 mt-2">
-                <!-- <input class="search-bar form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
-                    aria-label="Search">
-                <i class="search-btn h-100 fas fa-search text-white" aria-hidden="true" href="/moviedetails.html"></i> -->
+
             </form>
         </div>
-        <span onclick="openNav()"><i class="fas fa-chevron-down fa-2x"></i></span>
-        <p>did you watch this?</p>
-        <a class="fas fa-search fa-2x" href="/moviedetails.html"></a>
+        <span onclick="openNav()"><i class="openbtn fas fa-chevron-right fa-2x"></i></span>
+        <img id="logo-header" src="/img/dywt logo blue.png" alt="logo">
+        <a id="magniglass-header" class="fas fa-search" href="/moviedetails.html"></a>
     </header>
 
     <section id="sect-welcome">
         <h1>Welcome</h1>
         <p>well, this is kinda random...</p>
     </section>
-    
+
     <section id="sect-latest">
         <h2>Latest randoms</h2>
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -68,8 +68,8 @@
         <div class="container-random">
             <div id="image-random" class="img-random"></div>
             <div class="txt-random">
-                <p><a class="btn btn-info btn-sm text text-center text-decoration-none" data-toggle="collapse"
-                        href="#seeMoreInfo">More info</a></p>
+                <p><a class="btn-moreinfo btn btn-info btn-sm text text-center text-decoration-none"
+                        data-toggle="collapse" href="#seeMoreInfo">More info</a></p>
                 <div class="collapse" id="seeMoreInfo">
                     <ul class="list-group list-group-flush">
                         <li id="title-moreinfo" class="list-group-item">Title</li>
@@ -98,9 +98,10 @@
 </body>
 
 <footer>
-    <section>
-        <p><a class="text text-center text-decoration-none" data-toggle="collapse" href="#multiCollapseExample1"
-                role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Wanna say something?</a></p>
+    <section id="contact-container">
+        <p id="contact-btn"><a class="text text-center text-decoration-none" data-toggle="collapse"
+                href="#multiCollapseExample1" role="button" aria-expanded="false"
+                aria-controls="multiCollapseExample1">Wanna say something?</a></p>
         <div class="row">
             <div class="col">
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
