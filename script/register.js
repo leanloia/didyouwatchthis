@@ -117,6 +117,10 @@ class Signup {
         errorsStringsArr.forEach(errorStr => {
             const errorMessageP = document.createElement('p');
             errorMessageP.innerHTML = errorStr;
+            errorMessageP.classList.add("btn");
+            errorMessageP.classList.add("btn-outline-danger");
+            errorMessageP.classList.add("btn-rounded");
+            errorMessageP.classList.add("waves-effect");
             this.errorsWrapper.appendChild(errorMessageP)
         });
 
@@ -134,7 +138,9 @@ class Signup {
 
         const successMessageP = document.createElement('p');
         successMessageP.innerHTML = 'La cuenta ha sido creada con éxito';
-
+        successMessageP.classList.add('btn');
+        successMessageP.classList.add('btn-success');
+        successMessageP.classList.add('btn-rounded');
         this.errorsWrapper.appendChild(successMessageP);
     }
 
