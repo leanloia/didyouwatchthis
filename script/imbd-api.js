@@ -42,6 +42,7 @@ const getRandomMovies = async () => {
     imgCont.src = `${movieImage}`
     imgCont.alt = `${movieTitle}`
     imageCont.appendChild(imgCont)
+
     
 };
 
