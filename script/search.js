@@ -2,11 +2,6 @@
 
 const searchMovie = async () => {
     
-    // const redirect = () => {
-    //     location.assign("/moviedetails.html")
-    //     return redirect()
-    // }
-    
     const searchBar = document.querySelector(".search-bar")
     const searchInput = searchBar.value
     
@@ -17,7 +12,7 @@ const searchMovie = async () => {
     const idSearch = await fetch(`https://imdb-api.com/en/API/Title/k_r4OyjdJv/${resultId}`)
     const movieResult = await idSearch.json()
     
-    
+    //obtengo variables de objeto que traje
     const movieFullTitle = movieResult.fullTitle
     const movieReleaseDate = movieResult.releaseDate
     const movieDuration = movieResult.runtimeStr
@@ -31,22 +26,45 @@ const searchMovie = async () => {
     const movieBoxOffice = movieResult.boxOffice.cumulativeWorldwideGross
     const movieImg = movieResult.image
     
-    const imgDetailCont = document.querySelector('.container-details')
-    const imgContainer = document.createElement(`img`)
+    //busco elemento contenedor
+    const resultContainer = document.querySelector('.container-details')
+    //creo contenedor para título
     const titleCont = document.createElement(`p`)
+    titleCont.innerHTML = `${movieFullTitle}`
+    titleCont.classList.add('titleMovieSearch')
+    
+    //creo contenedor para imagen
+    const imgContainer = document.createElement(`img`)
     imgContainer.src = `${movieImg}`
     imgContainer.alt = `${movieFullTitle}`
     imgContainer.classList.add('img-cont')
-    titleCont.innerHTML = `${movieFullTitle}`
-    titleCont.classList.add('titleMovieSearch')
-    imgDetailCont.innerHTML = ''
-    imgDetailCont.appendChild(titleCont);
-    imgDetailCont.appendChild(imgContainer);
     
+    //creo contenedor para detalles  
+    const detailsContainer = document.createElement(`div`)
+    detailsContainer.innerHTML = `
+        <section class="sect-infoMovie">
+        <p class="info-paragraph"><i>Full Title:  </i> ${movieFullTitle}</p>
+        <p class="info-paragraph"><i>Director: </i>${movieDirector}</p>
+        <p class="info-paragraph"><i>Release date: </i>${movieReleaseDate}</p>
+        <p class="info-paragraph"><i>Duration: </i>${movieDuration}</p>
+        <p class="info-paragraph"><i>Plot: </i>${moviePlot}</p>
+        <p class="info-paragraph"><i>Awards: </i>${movieAwards}</p>
+        <p class="info-paragraph"><i>Cast: </i>${movieStars}</p>
+        <p class="info-paragraph"><i>Writers: </i>${movieWriters}</p>
+        <p class="info-paragraph"><i>Genre: </i>${movieGenre}</p>
+        <p class="info-paragraph"><i>Imdb Rating: </i>${movieImDbRate}</p>
+        <p class="info-paragraph"><i>BoxOffice: </i>${movieBoxOffice}</p>
+    </section>`
     
+    //vacio elem contenedor   
+    resultContainer.innerHTML = ''
+    //hago appendChild de los elementos creados
+    resultContainer.appendChild(titleCont);
+    resultContainer.appendChild(imgContainer);
+    resultContainer.appendChild(detailsContainer)
     
 }
 
 const searchBTN = document.querySelector('.search-btn')
 searchBTN.addEventListener('click', searchMovie)
-// searchBTN.addEventListener('click', redirect)
+
