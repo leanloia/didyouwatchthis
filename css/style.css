@@ -67,6 +67,7 @@ header p {
   padding-top: 60px;
   transition: 0.5s;
 
+
 }
 
 /* The navigation menu links */
@@ -218,9 +219,9 @@ footer {
   flex-direction: row;
 }
 
-#contact-btn {
+/* #contact-btn {
   padding-top: 1em;
-}
+} */
 
 
 /* REGISTER */
@@ -231,7 +232,7 @@ footer {
   justify-content: center;
   align-items: center;
   /* background-color: lightskyblue; */
-  height: 100vh;
+  height: 100%;
   padding: 8em 4em;
 }
 
@@ -241,6 +242,7 @@ footer {
   align-items: center;
   height: 65%;
   width: 50%
+  padding: 1rem 0;
 }
 
 
@@ -252,7 +254,7 @@ footer {
   justify-content: center;
   align-items: center;
   /* background-color: lightskyblue; */
-  height: 100vh;
+  height: 90%;
   padding: 9em 2em;
 
 
@@ -295,12 +297,13 @@ footer {
 .img-cont {
   height: 45%;
   width: 90%;
-  padding-top: 1rem;
+  box-shadow: 2px 2px 2px black;
 }
 
 .titleMovieSearch {
   padding-top: 2.5rem;
   font-size: 1.3em;
+  text-align: center;
 
 }
 
@@ -310,6 +313,18 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   
+}
+
+.sect-infoMovie {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem;
+
+}
+
+.info-paragraph > i {
+  font-weight: bold;
+  border-bottom: #05C7F2 solid 1.5px;
 }
 
 
