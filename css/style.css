@@ -298,6 +298,20 @@ footer {
   width: 50%
 }
 
+.container-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.correct-message {
+  color: #00c851;
+
+
+}
+
 .container-login > input {
   margin: 1rem 0;
 }
