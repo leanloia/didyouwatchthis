@@ -36,8 +36,28 @@
             aria-label="Search">
         <i class="search-btn h-100 fas fa-search text-cyan ml-3" aria-hidden="true"></i>
     </form>
+    
     <section id="sect-details">
-        <div class="container-details"></div>
+        <div class="container-details">
+            <section id="sect-random">
+                <h2>Want a random?</h2>
+                <div class="container-random">
+                    <div id="image-random" class="img-random"></div>
+                    <div class="txt-random">
+                        <p><a class="btn-moreinfo btn btn-info btn-sm text text-center text-decoration-none"
+                                data-toggle="collapse" href="#seeMoreInfo">More info</a></p>
+                        <div class="collapse" id="seeMoreInfo">
+                            <ul class="list-group list-group-flush">
+                                <li id="title-moreinfo" class="list-group-item">Title</li>
+                                <li id="year-moreinfo" class="list-group-item">Year</li>
+                                <li id="imDbRating-moreinfo" class="list-group-item">ImDbRating</li>
+                                <li id="crew-moreinfo" class="list-group-item">Crew</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

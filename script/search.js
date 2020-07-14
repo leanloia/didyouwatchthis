@@ -2,6 +2,7 @@
 
 const searchMovie = async () => {
     
+     
     const searchBar = document.querySelector(".search-bar")
     const searchInput = searchBar.value
     
@@ -56,7 +57,7 @@ const searchMovie = async () => {
         <p class="info-paragraph"><i>BoxOffice: </i>${movieBoxOffice}</p>
     </section>`
     
-    //vacio elem contenedor   
+    //vacio elementos contenedores
     resultContainer.innerHTML = ''
     //hago appendChild de los elementos creados
     resultContainer.appendChild(titleCont);
