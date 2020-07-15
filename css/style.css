@@ -163,7 +163,23 @@ header p {
   padding: 3em 2em;
 }
 
+#sect-random-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: lightskyblue; */
+  height: 100%;
+  width: 100%;
+  margin: 0 2em 0 2em
+  /* z-index: 0; */
+  padding: 3em 2em;
+}
+
 #sect-random img {
+  width: 100%;
+}
+
+#sect-random-search img {
   width: 100%;
 }
 
@@ -172,7 +188,16 @@ header p {
   padding-top: 1em;
 }
 
+#sect-random-search h2 {
+  width: 100%;
+  padding-top: 1em;
+}
+
 #sect-random h5 {
+  width: 100%;
+  padding-top: 1em;
+}
+#sect-random-search h5 {
   width: 100%;
   padding-top: 1em;
 }
@@ -225,6 +250,10 @@ footer {
 
 .nav-bar-bottom > a {
   padding: 0.5rem;
+}
+
+#contact-container p {
+  margin: 0;
 }
 
 #contact-btn {
@@ -334,7 +363,7 @@ footer {
 }
 
 .nav-bar-bottom {
-  font-size: 0.5em;
+  font-size: 0.8em;
 }
 
 /* MOVIE DETAILS */
@@ -357,6 +386,14 @@ footer {
   /* height: 100vh; */
 }
 
+.detailsSubCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+}
+
 .img-cont {
   height: 45%;
   width: 90%;
@@ -364,7 +401,7 @@ footer {
 }
 
 .titleMovieSearch {
-  padding-top: 2.5rem;
+  padding: 2.5rem 0;
   font-size: 1.3em;
   text-align: center;
 }
@@ -396,72 +433,104 @@ footer {
     /* index */
 
     /* HEADER */
-    header {
-      z-index: 0;
+    
+    /* FOOTER */
+    
+    #contact-btn {
+      font-size: 1.2rem;
+      padding: 1rem;
+
     }
 
+    .nav-bar-bottom {
+      font-size: 1rem;
+    }  
+    /* welcome-section */
 
-    /* navbar */
+    #sect-welcome {
+      margin-bottom: 3rem;
+    }
+    
+    .col {
+      padding: 0.3rem 0;
+    }
 
-    .sidenav {
-      display: flex;
-      flex-direction: row;
-      height: inherit;
-      width: 100%;
-      position: static;
-      z-index: auto;
-      top: 0;
-      left: 0;
-      background-color: transparent;
-      padding-top: 0;
-      transition: 0;
-      align-items: center;
-      
-    }
-    
-    /* The navigation menu links */
-    .sidenav a {
-      padding: 0;
-      text-decoration: none;
-      font-size: :default;
-      color: black;
-      transition: 0;
-      width: 100%;
-      padding: 0.5rem;
-      display: ;
-      
-      ;
-    }
-    
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {
-      display: none;
-    }
-    
-    /* Position and style the close button (top right corner) */
-    .sidenav .closebtn {
-      display: none;
-    }
-    
-    .openbtn {
-      display: none;
-    }
-    
-    /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-    #main {
-      display: none;
-      
-    }
-  
     /* lastest-section */
 
+    .sectionsIndex {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+    }
+
     #sect-latest {
-      width: 50%;
+      width: 40%;
+      background-color: transparent;
+      padding-right: 1rem;
+      border-right: #05C7F2 solid 3px;
+      margin-bottom: 1rem;
+    }
+
+    #carouselExampleSlidesOnly {
+      margin: 0;
+    }
+
+    .carousel-item img {
+      width: 100%;
     }
 
     #sect-random {
-      width: 50%;
+      width: 40%;
+      padding-left: 1rem;
+    }
+
+    #sect-random a{
+      background-color: #05AFF2;
+      color: white;
+    }
+
+    /* movieDetails Page */
+
+    #sect-random-search {
+      width: 70%;
+    }
+    
+    #sect-random-search a {
+      background-color: #05AFF2;
+      color: white;
+
+    }
+
+    .container-details {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* height: 100vh; */
+      width: 100%;
+    }
+
+    .container-random-search {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
       
+    }
+
+    .detailsSubCont {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .img-cont {
+      width: 50%;
+    }
+
+    .titleMovieSearch {
+      font-size: 1.5rem;
+
     }
 }
 

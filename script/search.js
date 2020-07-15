@@ -61,8 +61,11 @@ const searchMovie = async () => {
     resultContainer.innerHTML = ''
     //hago appendChild de los elementos creados
     resultContainer.appendChild(titleCont);
-    resultContainer.appendChild(imgContainer);
-    resultContainer.appendChild(detailsContainer)
+    const detailsSubContainer = document.createElement('div')
+    detailsSubContainer.classList.add('detailsSubCont')
+    resultContainer.appendChild(detailsSubContainer)
+    detailsSubContainer.appendChild(imgContainer);
+    detailsSubContainer.appendChild(detailsContainer)
     
 }
 
