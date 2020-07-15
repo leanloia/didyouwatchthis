@@ -39,10 +39,10 @@ class Login {
 
         if (user) {
             //si el usuario existe
-            message.innerHTML = `Hola, ${user.email}`;
+            message.innerHTML = `Welcome back, ${user.username}`;
             message.classList.add('correct-message');
         } else {
-            message.innerHTML = 'Email y/o password son incorrectos';
+            message.innerHTML = 'Email o password son incorrectos';
 
         }
 
@@ -54,7 +54,7 @@ class Login {
     }
 
     redirect = () => {
-        setTimeout( () =>location.assign("../index.html"), 2000)        
+        setTimeout( () =>location.assign("../index.html"), 3500)        
     }
 
 
