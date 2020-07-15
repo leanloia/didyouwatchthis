@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
 
+@keyframes tracking-in-expand-fwd-bottom {
+  0% {
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px) translateY(500px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+
 * {
   /* border: grey solid 0.5px; */
   font-family: "Roboto Slab", serif;
@@ -112,6 +128,10 @@ header p {
   /* background-color: orange; */
   height: 100vh;
   text-align: center;
+  animation: tracking-in-expand-fwd-bottom 2.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+#welcome {
 }
 
 /* LATEST RANDOM */
