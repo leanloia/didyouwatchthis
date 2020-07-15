@@ -152,9 +152,10 @@ header p {
   justify-content: space-around;
   /* background-color: lightskyblue; */
   height: 100%;
-  margin: 0 1em 1em 1em;
+  width: 100%;
+  margin: 0 2em 0 2em
   /* z-index: 0; */
-  padding: 9em 4em;
+  padding: 3em 2em;
 }
 
 #sect-random img {
@@ -170,6 +171,7 @@ header p {
   display: flex;
   flex-direction: column;
   height: 65%;
+  margin: 0 1rem;
 }
 
 .txt-random {
@@ -335,7 +337,7 @@ footer {
   height: 100%;
   margin: 0 1em 1em 1em;
   z-index: 0;
-  padding: 9em 4em;
+  /* padding: 9em 4em; */
 }
 
 .container-details {
