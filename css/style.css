@@ -97,6 +97,12 @@ header p {
 #main {
   transition: margin-left 0.5s;
   padding: 20px;
+  
+}
+
+.section-title {
+  padding: 5rem 1rem 1rem 1rem;
+  text-decoration: underline #05C7F2;
 }
 
 /* WELCOME */
@@ -167,6 +173,11 @@ header p {
   padding-top: 1em;
 }
 
+#sect-random h5 {
+  width: 100%;
+  padding-top: 1em;
+}
+
 .container-random {
   display: flex;
   flex-direction: column;
@@ -224,7 +235,7 @@ footer {
 /* Q / A */
 
 #sect-questions {
-  padding: 6rem 1rem 4rem 1rem;
+  padding: 0 1rem 4rem 1rem;
   max-width: 100vh;
   height: 100%;
   display: flex;
@@ -294,7 +305,7 @@ footer {
   align-items: center;
   /* background-color: lightskyblue; */
   height: 90%;
-  padding: 9em 2em;
+  padding: 9rem 2rem;
 }
 
 .container-login {
@@ -360,7 +371,7 @@ footer {
 }
 
 #search-bar {
-  padding-top: 6em;
+  /* padding-top: 6em; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
