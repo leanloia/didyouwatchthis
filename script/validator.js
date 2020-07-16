@@ -39,8 +39,6 @@ class Validator {
             }
         }
 
-        
-
     }
 
     //validar email
