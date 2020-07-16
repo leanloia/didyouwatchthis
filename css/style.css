@@ -155,8 +155,6 @@ header p {
   animation: color-change-2x 8s linear infinite alternate both;
 }
 
-#welcome {
-}
 
 /* LATEST RANDOM */
 #sect-latest {
@@ -203,7 +201,7 @@ header p {
   /* background-color: lightskyblue; */
   height: 100%;
   width: 100%;
-  margin: 0 2em 0 2em
+  margin: 0 2em 0 2em;
   /* z-index: 0; */
   padding: 3em 2em;
 }
@@ -215,7 +213,7 @@ header p {
   /* background-color: lightskyblue; */
   height: 100%;
   width: 100%;
-  margin: 0 2em 0 2em
+  margin: 0 2em 0 2em;
   /* z-index: 0; */
   padding: 3em 2em;
 }
@@ -383,7 +381,7 @@ footer {
   justify-content: center;
   align-items: center;
   /* background-color: lightskyblue; */
-  height: 90%;
+  height: 100vh;
   padding: 9rem 2rem;
   animation: tracking-in-expand-fwd-bottom 2.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -432,7 +430,7 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   /* background-color: lightskyblue; */
-  height: 100%;
+  height: 100;
   margin: 0 1em 1em 1em;
   z-index: 0;
   /* padding: 9em 4em; */
@@ -539,7 +537,7 @@ footer {
 
     #sect-random {
       width: 40%;
-      padding-left: 1rem;
+      padding: 0;
     }
 
     #sect-random a{
@@ -551,6 +549,9 @@ footer {
 
     #sect-random-search {
       width: 70%;
+      height: 100vh;
+      padding-top: 0;
+
     }
     
     #sect-random-search a {
