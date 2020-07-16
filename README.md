@@ -1,3 +1,5 @@
+<img src="./img/cover readme.jpg">
+
 # Did you watch this?
 
 **Did you watch this?** (or "DYWT") works as a random movie displayer that offers you choices to watch and learn about.
