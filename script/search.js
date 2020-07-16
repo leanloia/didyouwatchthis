@@ -72,3 +72,6 @@ const searchMovie = async () => {
 const searchBTN = document.querySelector('.search-btn')
 searchBTN.addEventListener('click', searchMovie)
 
+
+
+

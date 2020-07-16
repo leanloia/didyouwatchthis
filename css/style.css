@@ -315,6 +315,17 @@ footer {
   /* align-items: center; */
 }
 
+#sect-questions .card-body {
+  border: #BF6550 solid 1px;
+  box-shadow: 2px 2px 5px #BF6550;
+}
+
+#sect-questions h6 {
+  color: #05C7F2;
+}
+
+
+
 @keyframes tilt-in-left-1 {
   0% {
     transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
@@ -594,30 +605,18 @@ footer {
   /* Q / A */
 
   #sect-questions {
-    padding: 0 3rem 4rem 3rem;
+    padding: 0 3rem 4rem 8rem;
     max-width: 100vh;
     height: 100%;
     
     
     
+    
   }
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width: 992px) {
 
 }
 
