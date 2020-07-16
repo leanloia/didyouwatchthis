@@ -19,32 +19,42 @@
   0% {
     background: #05AFF2;
   }
-
+  
   25% {
     background: #F2F2F2;
   }
-
+  
   /* 50% {
     background: #0D0D0D;
   } */
-
+  
   75% {
     background: #BF6550;
   }
-
+  
   100% {
     background: #05C7F2 ;
   }
 }
 
+@keyframes tilt-in-left-1 {
+  0% {
+    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
+  }
+}
 
 
 * {
   /* border: grey solid 0.5px; */
   font-family: "Roboto Slab", serif;
-  /*   
+  /*
   primary-color: #05AFF2
-  secondary-color:#05C7F2   
+  secondary-color:#05C7F2
   background-color: #F2F2F2 (grey)
   blackish-color: #0D0D0D
   middle-color:#BF6550 (orangy)
@@ -52,9 +62,11 @@
 }
 
 body {
-  margin: 0 0.1rem;
+  margin: 0;
   position: 0, 0;
+  width: 100%;
   font-family: "Roboto Slab", serif;
+
 }
 
 header {
@@ -135,7 +147,7 @@ header p {
 #main {
   transition: margin-left 0.5s;
   padding: 20px;
-  
+
 }
 
 .section-title {
@@ -152,7 +164,7 @@ header p {
   height: 100vh;
   text-align: center;
   animation: tracking-in-expand-fwd-bottom 2.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-  animation: color-change-2x 8s linear infinite alternate both;
+  animation: color-change-2x 26s linear infinite alternate both;
 }
 
 
@@ -160,10 +172,11 @@ header p {
 #sect-latest {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   /* background-color: pink; */
   background-color: #f2f2f2;
   width: 100%;
-  
+
 }
 
 #sect-latest > div {
@@ -200,8 +213,8 @@ header p {
   justify-content: space-around;
   /* background-color: lightskyblue; */
   height: 100%;
-  width: 100%;
-  margin: 0 2em 0 2em;
+  width: 100vw;
+  margin: 0;
   /* z-index: 0; */
   padding: 3em 2em;
 }
@@ -213,9 +226,9 @@ header p {
   /* background-color: lightskyblue; */
   height: 100%;
   width: 100%;
-  margin: 0 2em 0 2em;
+  margin: 0 1em 0 1em;
   /* z-index: 0; */
-  padding: 3em 2em;
+  padding: 0 2em 3em 2em;
 }
 
 #sect-random img {
@@ -223,7 +236,7 @@ header p {
 }
 
 #sect-random-search img {
-  width: 100%;
+  width: 80%;
 }
 
 #sect-random h2 {
@@ -326,16 +339,6 @@ footer {
 
 
 
-@keyframes tilt-in-left-1 {
-  0% {
-    transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(0deg) translateX(0) skewX(0deg);
-    opacity: 1;
-  }
-}
 
 .question {
   animation: tilt-in-left-1 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -366,16 +369,16 @@ footer {
   flex-direction: column;
   align-items: center;
   height: 65%;
-  width: 50%;
+  width: 100%;
   padding: 1rem 0;
 }
 
 .container-register > input {
   margin: 0.5rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   border: black solid 1px;
   box-shadow: 1px 1px 6px lightgrey;
-  
+
 }
 
 .btn-primary {
@@ -441,7 +444,7 @@ footer {
   flex-direction: column;
   justify-content: space-around;
   /* background-color: lightskyblue; */
-  height: 100;
+  height: 100%;
   margin: 0 1em 1em 1em;
   z-index: 0;
   /* padding: 9em 4em; */
@@ -493,15 +496,14 @@ footer {
   border-bottom: #05c7f2 solid 1.5px;
 }
 
-
 @media screen and (min-width: 768px) {
-    
+
     /* index */
 
     /* HEADER */
-    
+
     /* FOOTER */
-    
+
     #contact-btn {
       font-size: 1.2rem;
       padding: 1rem;
@@ -510,13 +512,13 @@ footer {
 
     .nav-bar-bottom {
       font-size: 1rem;
-    }  
+    }
     /* welcome-section */
 
     #sect-welcome {
       margin-bottom: 3rem;
     }
-    
+
     .col {
       padding: 0.3rem 0;
     }
@@ -561,10 +563,11 @@ footer {
     #sect-random-search {
       width: 70%;
       height: 100vh;
-      padding-top: 0;
+      padding-top: 2rem;
+      margin-bottom: 1em;
 
     }
-    
+
     #sect-random-search a {
       background-color: #05AFF2;
       color: white;
@@ -576,15 +579,20 @@ footer {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      /* height: 100vh; */
-      width: 100%;
+      /* width: 100vw; */
     }
 
     .container-random-search {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .container-random-search img {
+      width: 50%;
     }
 
     .detailsSubCont {
@@ -608,15 +616,29 @@ footer {
     padding: 0 3rem 4rem 8rem;
     max-width: 100vh;
     height: 100%;
-    
-    
-    
-    
+
+
+
+
   }
 
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 960px) {
+
+    /* section*/
+
+
+    /* section register */
+
+  .container-register > input {
+    font-size: 1.3rem;
+    
+    
+
+}
+
+
 
 }
 
