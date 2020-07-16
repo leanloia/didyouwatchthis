@@ -359,7 +359,7 @@ footer {
   justify-content: center;
   align-items: center;
   /* background-color: lightskyblue; */
-  height: 100%;
+  height: 100vh;
   padding: 8em 4em;
   animation: tracking-in-expand-fwd-bottom 2.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
@@ -591,6 +591,11 @@ footer {
 
     }
 
+    .container-random-search .txt-random {
+      /* width: 100%; */
+      margin: 0em 1em 1.5em 1em;
+    }
+
     .container-random-search img {
       width: 50%;
     }
@@ -631,8 +636,13 @@ footer {
 
     /* section register */
 
+  .container-register {
+    height: 100vh;
+  }    
   .container-register > input {
     font-size: 1.3rem;
+
+  
     
     
 
