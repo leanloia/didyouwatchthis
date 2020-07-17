@@ -153,7 +153,6 @@ header p {
 .section-title {
   padding: 5rem 1rem 1rem 1rem;
   text-decoration: underline #05c7f2;
-  
 }
 
 /* WELCOME */
@@ -411,7 +410,6 @@ footer {
 .container-login > a {
   padding: 1.3rem 0;
 }
-}
 
 .container-login input {
   font-size: 1.3rem;
@@ -624,12 +622,9 @@ footer {
     height: 100%;
     margin: 0 2rem;
   }
-
-  
 }
 
 @media screen and (min-width: 900px) {
-
   #sect-random-search {
     width: 65%;
   }
@@ -641,11 +636,7 @@ footer {
   .card-body {
     padding: 2rem 1rem;
   }
-
-  
-  
 }
-
 
 @media screen and (min-width: 1080px) {
   /* section*/
@@ -670,7 +661,6 @@ footer {
   #sect-questions {
     margin: 0 10rem;
     font-size: 2rem;
-
   }
 
   .card-body {
@@ -678,7 +668,6 @@ footer {
   }
 
   .answer {
-    
   }
 }
 
