@@ -621,7 +621,7 @@ footer {
   /* section register */
 
   .container-register {
-    height: 100vh;
+    height: 100%;
   }
 
   .container-register > input {
