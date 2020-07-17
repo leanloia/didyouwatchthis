@@ -40,9 +40,16 @@ class Login {
         if (user) {
             //si el usuario existe
             message.innerHTML = `Welcome back, ${user.username}`;
-            message.classList.add('correct-message');
+            message.classList.add('btn');
+            message.classList.add('btn-success');
+            message.classList.add('btn-rounded');
         } else {
             message.innerHTML = 'Email o password son incorrectos';
+            message.classList.add('failure-message')
+            message.classList.add("btn");
+            message.classList.add("btn-outline-danger");
+            message.classList.add("btn-rounded");
+            message.classList.add("waves-effect");;
 
         }
 
