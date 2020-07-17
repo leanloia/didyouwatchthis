@@ -427,6 +427,11 @@ footer {
   margin-top: 1.5rem;
 }
 
+.failure-message {
+  color: red;
+  margin-top: 1.5rem;
+}
+
 .container-login > input {
   margin: 1rem 0;
 }
@@ -557,7 +562,7 @@ footer {
 
   #sect-random-search {
     width: 70%;
-    height: 100vh;
+    height: 100%;
     padding-top: 2rem;
     margin-bottom: 1em;
   }
@@ -615,6 +620,13 @@ footer {
   }
 }
 
+@media screen and (min-width: 900px) {
+
+  #sect-random-search {
+    width: 65%;
+  }
+}
+
 @media screen and (min-width: 1080px) {
   /* section*/
 
@@ -629,6 +641,16 @@ footer {
   }
 
   #sect-random-search {
-    width: 60%;
+    width: 58%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* section*/
+
+  /* section register */
+
+  #sect-random-search {
+    width: 50%;
   }
 }
