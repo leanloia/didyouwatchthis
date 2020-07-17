@@ -38,21 +38,7 @@ The **MVP** will cover the following:
   - style.css
   - reset.css
 - font/
-  - static/
-  - LICENSE.txt
-  - README.txt
-  - RobotoSlab-VariableFont_wght.ttf
 - img/
-  - cover readme.jpg
-  - dogtooth.jpg
-  - dunkirk.jpg
-  - dywt logo blue.jpg
-  - dywt logo yellow.jpg
-  - fight_club.jpg
-  - magnolia.jpg
-  - placeholder_100x133.jpg
-  - randomness.jpg
-  - shining.jpg
 - script/
   - database.js
   - imdb-api.js
@@ -79,4 +65,4 @@ The **MVP** will cover the following:
 
 #### Deploy
 
-<a href="https://interstellarpf.github.io/didyouwatchthis" alt="deploy-link" >Deployment</a>
+<a href="https://interstellarpf.github.io/didyouwatchthis" alt="deploy-link">Deployment</a>
