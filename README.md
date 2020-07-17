@@ -2,9 +2,9 @@
 
 # Did you watch this?
 
-**Did you watch this?** (or "DYWT") works as a random movie displayer that offers you choices to watch and learn about.
+**Did you watch this?** (a.k.a. "DYWT") works as a random movie displayer that offers you choices to watch and learn about.
 
-You'll be capable of view info about a random movie, and learn more about it. Also accessing to a IMDB database and an specific content and his detail information.
+You'll be capable of view info about a random movie, and learn more about it. Also accessing to a IMDB database and an specific content and his detailed information.
 
 **DYWT** was developed using JavaScript as a project for the Ironhack full-stack developer bootcamp (06-2020) using the IMDb-API.
 
