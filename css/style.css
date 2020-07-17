@@ -408,6 +408,11 @@ footer {
   width: 100%;
 }
 
+.container-login > a {
+  padding: 1.3rem 0;
+}
+}
+
 .container-login input {
   font-size: 1.3rem;
   border: black solid 1px;
